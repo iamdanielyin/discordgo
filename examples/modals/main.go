@@ -8,7 +8,7 @@ import (
 	"os/signal"
 	"strings"
 
-	"github.com/bwmarrin/discordgo"
+	"github.com/iamdanielyin/discordgo"
 )
 
 // Bot parameters
