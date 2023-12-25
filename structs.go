@@ -531,6 +531,10 @@ type ThreadMember struct {
 	JoinTimestamp time.Time `json:"join_timestamp"`
 	// Any user-thread settings, currently only used for notifications
 	Flags int `json:"flags"`
+	// Additional information about the user.
+	// NOTE: only present if the withMember parameter is set to true
+	// when calling Session.ThreadMembers or Session.ThreadMember.
+	Member *Member `json:"member,omitempty"`
 }
 
 // ThreadsList represents a list of threads alongisde with thread member objects for the current user.
@@ -1241,7 +1245,7 @@ type Role struct {
 	// The permissions of the role on the guild (doesn't include channel overrides).
 	// This is a combination of bit masks; the presence of a certain permission can
 	// be checked by performing a bitwise AND between this int and the permission.
-	Permissions int64 `json:"permissions_new,string"`
+	Permissions int64 `json:"permissions,string"`
 }
 
 // Mention returns a string which mentions the role
