@@ -1245,7 +1245,7 @@ type Role struct {
 	// The permissions of the role on the guild (doesn't include channel overrides).
 	// This is a combination of bit masks; the presence of a certain permission can
 	// be checked by performing a bitwise AND between this int and the permission.
-	Permissions int64 `json:"permissions,string"`
+	Permissions int64 `json:"permissions_new,string"`
 }
 
 // Mention returns a string which mentions the role
