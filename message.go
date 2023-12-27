@@ -50,6 +50,8 @@ type Message struct {
 	// The ID of the message.
 	ID string `json:"id"`
 
+	Nonce string `json:"nonce,omitempty"`
+
 	// The ID of the channel in which the message was sent.
 	ChannelID string `json:"channel_id"`
 
